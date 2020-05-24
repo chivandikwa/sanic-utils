@@ -1,0 +1,50 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+strategy:
+  matrix:
+    Python37:
+      python.version: '3.7'
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '$(python.version)'
+  displayName: 'Use Python $(python.version)'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+# Install python distributions like wheel, twine etc
+- script: |
+    pip install wheel
+    pip install twine
+
+# Build the python distribution from source
+- script: |
+    python setup.py bdist_wheel
+
+- task: TwineAuthenticate@1
+  displayName: 'Twine Authenticate'
+  inputs:
+    # In this case, name of the service connection is "pypitest".
+    pythonUploadServiceConnection: pythonUploadServiceConnection
+
+
+# Use command line script to 'twine upload', use -r to pass the repository name and --config-file to pass the environment variable set by the authenticate task.
+- script: |
+    python -m twine upload -r "sanic-utils" --config-file $(PYPIRC_PATH) dist/*.whl
+
+- script: |
+    pip install tox pytest-azurepipelines
+    tox -e py
+  displayName: 'tox'

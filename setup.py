@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="sanic-utils",
-    version="0.0.13",
+    version="0.1.0",
     author="Thulani Chivandikwa",
     author_email="chivandikwa.t@gmail.com",
     description="A suite of sanic sanic_utils",

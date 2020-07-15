@@ -64,11 +64,11 @@ The message type should be marked with @dataclass_json and @dataclass.
 
 ## Dependencies
 
-sanic 20.3.0
+sanic 20.6.3
 
 dataclasses 0.6
 
-dataclasses-json 0.4.3
+dataclasses-json 0.5.1
 
 # [CONTRIBUTING](CONTRIBUTING.md)
 

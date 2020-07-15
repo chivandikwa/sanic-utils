@@ -13,7 +13,9 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/chivandikwa/sanic-utils",
     packages=setuptools.find_packages(),
-    install_requires=["sanic", "dataclasses", "dataclasses-json"],
+    install_requires=["sanic==20.6.3",
+                      "dataclasses==0.6",
+                      "dataclasses-json==0.5.1"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

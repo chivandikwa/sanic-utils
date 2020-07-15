@@ -1,0 +1,33 @@
+
+B
+examples/server.py,8\f\8fd2d0edf48cd47305f828b97d76e748a6f2e855
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+@
+requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
+8
+setup.py,8\e\8e2edce0d507e1297474f25c00cae94258db38d8
+G
+sanic_utils/__init__.py,8\3\83bc5db746c02aa641935a34eff6d29dcb233198
+D
+dev_requirements.txt,9\b\9bfa375329a1b6c1486b2c7299b2772e6b92edda
+H
+sanic_utils/from_json.py,9\0\906fd574d284d96f49c214721f514f8db87f6ec3
+I
+.github/ISSUE_TEMPLATE.md,e\9\e92266778ac0ab35c5df350376a55fe504bb38b8
+P
+ .github/PULL_REQUEST_TEMPLATE.md,b\8\b8baf23d7ed7f2b79b86aeb041867428fb196428
+?
+CONTRIBUTING.md,3\f\3f454a98e586d1aa0d322e19afd5e67e08f2d3c8
+G
+tests/test_from_json.py,d\2\d2d09320f7499ffc577795af3c805be466e8ee09
+C
+azure-pipelines.yml,4\0\40ebc6823f24f296c0cd3fddd6ccda69b74ff2e4
+F
+junit/test-results.xml,3\7\37da6f958fcac6f98238f02248f427cc3b5c50f7
+j
+:htmlcov/_tox_py37_Lib_site-packages_chardet_jpcntx_py.html,7\f\7fa870762011384cf7a8aec671c45266b4471ac1
+7
+tox.ini,6\1\61be067c7cf3bdbf8a6b021a2b5167eb30612d0c

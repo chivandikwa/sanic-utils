@@ -20,18 +20,22 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
+    ls
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
+  workingDirectory: sanic-utils
 
 # Install python distributions like wheel, twine etc
 - script: |
     pip install wheel
     pip install twine
+  workingDirectory: sanic-utils
 
 # Build the python distribution from source
 - script: |
     python setup.py bdist_wheel
+  workingDirectory: sanic-utils
 
 - task: TwineAuthenticate@1
   displayName: 'Twine Authenticate'
@@ -43,8 +47,9 @@ steps:
 # Use command line script to 'twine upload', use -r to pass the repository name and --config-file to pass the environment variable set by the authenticate task.
 - script: |
     python -m twine upload -r "sanic-utils" --config-file $(PYPIRC_PATH) dist/*.whl
-
+  workingDirectory: sanic-utils
 - script: |
     pip install tox pytest-azurepipelines
     tox -e py
   displayName: 'tox'
+  workingDirectory: sanic-utils

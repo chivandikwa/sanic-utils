@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/chivandikwa/sanic-utils",
     packages=setuptools.find_packages(),
-    install_requires=["sanic==20.6.3",
+    install_requires=["sanic==20.12.7",
                       "dataclasses==0.6",
                       "dataclasses-json==0.5.1"],
     classifiers=[
